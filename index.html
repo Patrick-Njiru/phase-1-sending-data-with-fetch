@@ -6,9 +6,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JavaScript Lab</title>
+    <style>
+
+      form {
+        text-align: center;
+        border: 3px black solid;
+        width: 70vw;
+        padding: 30px;
+        margin: 10px auto; color: blue;
+      }
+
+      input#submit {
+        color: red;
+        background-color: black;
+        margin-left: 13vw;
+        border-radius: 10px;
+      }
+
+      p#error {
+        font-size: 3vw;
+        font-family: monospace, sans-serif;
+        line-height: 70px;
+        color: rgb(12, 180, 18);
+        font-weight: 600;
+        background-color: rgb(63, 61, 61);
+        width: 80vw;
+      }
+
+      div.error {
+        margin-left: 10vw;
+        position: relative;
+        top: 40vh;
+        text-align: center;
+      }
+      button {
+        background-color: blue;
+        color: white;
+        display: block;
+        width: 10vw;
+        border-radius: 10px;
+      }
+
+    </style>
   </head>
 
   <body>
+    <form action="http://localhost:3000/dogs" method="POST" >
+      <legend >Create Account</legend> <br>
+      <label> Username: 
+        <input type="text" name="userName" id="user_name">
+        </label
+      ><br /><br>
+      <label> Email: 
+        <input type="text" name="userEmail" id="email" style="margin-left: 1.8vw;">
+        </label
+      ><br /><br>
+      <input type="submit" id="submit" value="Submit">
+    </form>
+
     <script src="index.js"></script>
   </body>
 
