@@ -51,13 +51,11 @@ const submitData = (userName, userEmail) => {
     return fetch("http://localhost:3000/users", configurationObject)
     .then(resp => resp.json())
     .then(obj => {
-       document.querySelector('form').innerHTML = 
-       `<p>
-          <strong>Congratulations!</strong> Your account has been created with the following details: <br>
-          UserName : ${obj.name}, <br>
-          Email    : ${obj.email}. <br><br>
-          Your user ID is ${obj.id}
-       </p>` 
+        if ( obj.name === '' || obj.email === '') {
+            return alert('Please fill the Username and email before you proceed!')
+        } else {
+          document.querySelector('form').innerHTML = `<p> User ID: <b style="font-size: 3em;">${obj.id} </b>`
+        }
     })
     .catch(error => {
         document.querySelector('body').innerHTML= 

@@ -46,21 +46,27 @@
         width: 10vw;
         border-radius: 10px;
       }
+      legend {
+        color: black;
+        font-size: 3em;
+      }
 
     </style>
   </head>
 
   <body>
+
     <form action="http://localhost:3000/dogs" method="POST" >
-      <legend >Create Account</legend> <br>
+      <legend >Create Account</legend>
+      <br><br>
       <label> Username: 
         <input type="text" name="userName" id="user_name">
-        </label
-      ><br /><br>
+        </label>
+        <br><br>
       <label> Email: 
         <input type="text" name="userEmail" id="email" style="margin-left: 1.8vw;">
-        </label
-      ><br /><br>
+        </label>
+        <br><br>
       <input type="submit" id="submit" value="Submit">
     </form>
 
